@@ -22,9 +22,9 @@
             mono: ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace']
           },
           colors: {
-            sand: '#E9DEC7',      // light sand
-            ochre: '#C79A3B',     // ochre accent
-            turquoise: '#2BB3C0', // mediterranean blue
+            sand: '#E9DEC7',
+            ochre: '#C79A3B',
+            turquoise: '#2BB3C0',
             ink: '#0B0E0F'
           },
           boxShadow: {
@@ -37,14 +37,12 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    /* White base */
     body { background: #ffffff; }
 
-    /* North African arches header (subtle, airy): layered SVG background */
     .arches {
-      --sand: #E9DEC7; /* sand */
-      --ochre: #C79A3B; /* ochre */
-      --turquoise: #2BB3C0; /* mediterranean */
+      --sand: #E9DEC7;
+      --ochre: #C79A3B;
+      --turquoise: #2BB3C0;
       background: #fff;
       position: relative;
       overflow: hidden;
@@ -60,40 +58,20 @@
       background-size: 260px 140px;
       opacity: .5;
     }
-    /* Sand arches (back row) */
     .arches::before {
       top: -10px;
-      background-image: url('data:image/svg+xml;utf8,\
-        <svg xmlns="http://www.w3.org/2000/svg" width="260" height="140" viewBox="0 0 260 140">\
-          <defs>\
-            <path id="arch" d="M0,140 A65,65 0 0 1 130,140 A65,65 0 0 1 260,140 L260,140 L0,140 Z"/>\
-          </defs>\
-          <g fill="none" stroke="#E9DEC7" stroke-width="10">\
-            <use href="#arch"/>\
-          </g>\
-        </svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="140" viewBox="0 0 260 140"><defs><path id="arch" d="M0,140 A65,65 0 0 1 130,140 A65,65 0 0 1 260,140 L260,140 L0,140 Z"/></defs><g fill="none" stroke="#E9DEC7" stroke-width="10"><use href="#arch"/></g></svg>');
     }
-    /* Turquoise arches (front row) */
     .arches::after {
       bottom: -10px;
-      background-image: url('data:image/svg+xml;utf8,\
-        <svg xmlns="http://www.w3.org/2000/svg" width="260" height="140" viewBox="0 0 260 140">\
-          <defs>\
-            <path id="arch2" d="M0,140 A65,65 0 0 1 130,140 A65,65 0 0 1 260,140 L260,140 L0,140 Z"/>\
-          </defs>\
-          <g fill="none" stroke="#2BB3C0" stroke-width="6" opacity=".65">\
-            <use href="#arch2"/>\
-          </g>\
-        </svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="260" height="140" viewBox="0 0 260 140"><defs><path id="arch2" d="M0,140 A65,65 0 0 1 130,140 A65,65 0 0 1 260,140 L260,140 L0,140 Z"/></defs><g fill="none" stroke="#2BB3C0" stroke-width="6" opacity=".65"><use href="#arch2"/></g></svg>');
     }
 
-    /* Soft image loading effect */
     .fade-in { opacity: 0; transform: translateY(8px); transition: opacity .5s ease, transform .5s ease; }
     .fade-in.is-visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body class="text-ink">
-  <!-- Header / Name only -->
   <header class="arches">
     <div class="max-w-6xl mx-auto px-6 pt-16 md:pt-24 pb-14 md:pb-20 text-center">
       <h1 class="font-mono text-5xl md:text-7xl tracking-tight font-semibold inline-block px-4 pb-2 border-b-4" style="border-color: #C79A3B">
@@ -102,76 +80,64 @@
     </div>
   </header>
 
-  <!-- Gallery (10 images) on white -->
   <main>
     <section class="max-w-6xl mx-auto px-6 pb-24">
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
-        <!-- Replace src and data-full with your assets/photos/... paths -->
-        <!-- 1 -->
         <a class="group relative fade-in aspect-[4/5] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="0" data-full="assets/photos/photo1.jpg">
           <img src="assets/photos/photo1.jpg" alt="Photo 1 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="eager"/>
         </a>
-        <!-- 2 -->
         <a class="group relative fade-in aspect-[3/4] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="1" data-full="assets/photos/photo2.jpg">
           <img src="assets/photos/photo2.jpg" alt="Photo 2 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 3 -->
         <a class="group relative fade-in aspect-[1/1] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="2" data-full="assets/photos/photo3.jpg">
           <img src="assets/photos/photo3.jpg" alt="Photo 3 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 4 -->
         <a class="group relative fade-in aspect-[4/5] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="3" data-full="assets/photos/photo4.jpg">
           <img src="assets/photos/photo4.jpg" alt="Photo 4 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 5 -->
         <a class="group relative fade-in aspect-[16/10] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft col-span-2" data-index="4" data-full="assets/photos/photo5.jpg">
           <img src="assets/photos/photo5.jpg" alt="Photo 5 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 6 -->
         <a class="group relative fade-in aspect-[3/4] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="5" data-full="assets/photos/photo6.jpg">
           <img src="assets/photos/photo6.jpg" alt="Photo 6 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 7 -->
         <a class="group relative fade-in aspect-[4/5] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="6" data-full="assets/photos/photo7.jpg">
           <img src="assets/photos/photo7.jpg" alt="Photo 7 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 8 -->
         <a class="group relative fade-in aspect-[1/1] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="7" data-full="assets/photos/photo8.jpg">
           <img src="assets/photos/photo8.jpg" alt="Photo 8 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 9 -->
         <a class="group relative fade-in aspect-[3/4] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft" data-index="8" data-full="assets/photos/photo9.jpg">
           <img src="assets/photos/photo9.jpg" alt="Photo 9 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
-        <!-- 10 -->
         <a class="group relative fade-in aspect-[16/10] overflow-hidden rounded-xl border border-sand/80 bg-white hover:shadow-soft col-span-2" data-index="9" data-full="assets/photos/photo10.jpg">
           <img src="assets/photos/photo10.jpg" alt="Photo 10 — Rawdha Hidri" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"/>
         </a>
       </div>
 
-      <!-- Minimal footer -->
+      <!-- Footer -->
       <div class="mt-12 md:mt-16 flex items-center justify-between text-xs text-neutral-500">
         <span>© <span id="year"></span> Rawdha Hidri</span>
-      <div class="space-x-4">
-        <!-- Instagram link -->
-        <a href="https://www.instagram.com/rawdha_hidri/" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="hover:text-ink">
-        Instagram
-      </a>
+        <div class="space-x-4">
+          <a
+            href="https://www.instagram.com/rawdha_hidri/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-ink"
+            aria-label="Visit Rawdha Hidri on Instagram"
+          >Instagram</a>
 
-      <!-- Email link -->
-      <a href="mailto:hidrirawdha@gmail.com 
-         class="hover:text-ink">
-        Email
-    </a>
-  </div>
+          <a
+            href="mailto:hidrirawdha@gmail.com?subject=Photography%20Inquiry&body=Hi%20Rawdha%2C%0A%0AI%27m%20interested%20in%20your%20photography.%20Please%20get%20back%20to%20me%20when%20you%20can."
+            class="hover:text-ink"
+            aria-label="Send an email to Rawdha Hidri"
+          >Email</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Lightbox (unchanged core, new minimal styling) -->
+  <!-- Lightbox -->
   <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/85">
     <button id="closeBtn" class="absolute right-5 top-5 h-10 w-10 rounded-full border border-white/30 text-white/90 text-xl leading-none">×</button>
     <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-3xl" aria-label="Previous">‹</button>
@@ -216,13 +182,7 @@
       if (e.key==='ArrowLeft') prev();
     });
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
-  <!-- Notes
-    • Replace image paths under /assets/photos/.
-    • Arches are decorative lines (sand/turquoise) on a white background — minimal and airy.
-  -->
 </body>
 </html>
